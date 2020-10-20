@@ -17,6 +17,7 @@ describe('Input', () => {
     type: 'email',
     value: 'bazzinga!',
     placeholder: '42',
+    fullWidth: true,
     onChange: jest.fn(),
     ...options,
   });
@@ -29,7 +30,7 @@ describe('Input', () => {
 
       expect(component).toMatchInlineSnapshot(`
         <input
-          className="input"
+          className="input input--fullWidth"
           onChange={[Function]}
           placeholder="42"
           type="email"
@@ -46,23 +47,41 @@ describe('Input', () => {
 
         component.find('input').simulate('change', changeEvent);
 
-        expect(props.onChange).toHaveBeenCalledWith(changeEvent, changeEvent.target.value);
+        expect(props.onChange).toHaveBeenCalledWith(changeEvent.target.value, changeEvent);
       });
     });
   });
 
   describe('without "type" prop set', () => {
-    it('should use default value', () => {
+    it('should use default value "text"', () => {
       const props = getTestProps();
 
-      const component = shallow(<Input {...props} type='date' />);
+      const component = shallow(<Input {...props} type={undefined} />);
 
       expect(component).toMatchInlineSnapshot(`
         <input
-          className="input"
+          className="input input--fullWidth"
           onChange={[Function]}
           placeholder="42"
-          type="date"
+          type="text"
+          value="bazzinga!"
+        />
+      `);
+    });
+  });
+
+  describe('without "fullWidth" prop set', () => {
+    it('should ignore class for the full width', () => {
+      const props = getTestProps();
+
+      const component = shallow(<Input {...props} fullWidth={false} />);
+
+      expect(component).toMatchInlineSnapshot(`
+        <input
+          className="input "
+          onChange={[Function]}
+          placeholder="42"
+          type="email"
           value="bazzinga!"
         />
       `);

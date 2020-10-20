@@ -1,0 +1,43 @@
+@import '../../tokens/screens.scss';
+
+.converter {
+  @include for-phone {
+    width: 100%;
+  }
+
+  @include for-tablet-up {
+    width: 320px;
+  }
+}
+
+.info {
+  margin-top: 12px;
+
+  @include for-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include for-tablet-up {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  & span {
+    @include for-phone {
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    @include for-tablet-up {
+      &:not(:first-child) {
+        margin-left: 8px;
+      }
+    }
+  }
+}

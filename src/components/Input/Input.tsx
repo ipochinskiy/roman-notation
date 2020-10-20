@@ -4,11 +4,14 @@ import styles from './Input.module.scss';
 
 type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'onChange'> & {
   type?: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>, value: string) => void;
+  onChange: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
+  fullWidth?: boolean;
 };
 
-export const Input: React.FC<InputProps> = ({ type = 'text', onChange, ...props }) => {
-  const wrappedOnChange = (e: ChangeEvent<HTMLInputElement>) => onChange(e, e.target.value);
+export const Input: React.FC<InputProps> = ({ type = 'text', onChange, fullWidth = false, ...props }) => {
+  const wrappedOnChange = (e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value, e);
 
-  return <input {...props} className={styles.input} type={type} onChange={wrappedOnChange} />;
+  const classList = [styles.input, fullWidth ? styles['input--fullWidth'] : undefined];
+
+  return <input {...props} className={classList.join(' ')} type={type} onChange={wrappedOnChange} />;
 };
