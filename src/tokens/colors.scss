@@ -1,0 +1,30 @@
+$palette-primary: #f95738;
+$palette-primary-l1: lighten($palette-primary, 10%);
+$palette-primary-l2: lighten($palette-primary, 20%);
+$palette-primary-l3: lighten($palette-primary, 30%);
+$palette-primary-l4: lighten($palette-primary, 40%);
+$palette-primary-d1: darken($palette-primary, 10%);
+$palette-primary-d2: darken($palette-primary, 20%);
+
+$palette-secondary: #0D3B66;
+$palette-secondary-l1: lighten($palette-secondary, 10%);
+$palette-secondary-l2: lighten($palette-secondary, 20%);
+$palette-secondary-l3: lighten($palette-secondary, 30%);
+$palette-secondary-l4: lighten($palette-secondary, 40%);
+$palette-secondary-d1: darken($palette-secondary, 10%);
+$palette-secondary-d2: darken($palette-secondary, 20);
+
+$palette-tertiary: #664d3b;
+$palette-tertiary-l1: lighten($palette-tertiary, 10%);
+$palette-tertiary-l2: lighten($palette-tertiary, 20%);
+$palette-tertiary-l3: lighten($palette-tertiary, 30%);
+$palette-tertiary-l4: lighten($palette-tertiary, 50%);
+$palette-tertiary-d1: darken($palette-tertiary, 10%);
+$palette-tertiary-d2: darken($palette-tertiary, 20%);
+
+$palette-neutral-1: #685F74;
+$palette-neutral-2: #b2b2b2;
+$palette-neutral-3: #f4e1d2;
+
+$palette-danger: #de351b;
+$palette-success: #34c082;

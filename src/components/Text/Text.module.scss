@@ -1,0 +1,132 @@
+@import '../../tokens/colors.scss';
+
+.text {
+  letter-spacing: 0.13px;
+};
+
+.size {    
+  &--small {
+    font-size: 14px;
+    line-height: 16px;
+  };
+
+  &--medium {
+    font-size: 16px;
+    line-height: 19px;
+  };
+
+  &--large {
+    font-size: 18px;
+    line-height: 24px;
+  };
+}
+
+.color {
+  &--primary {
+    color: $palette-primary;
+  };
+
+  &--primary-l1 {
+    color: $palette-primary-l1;
+  };
+
+  &--primary-l2 {
+    color: $palette-primary-l2;
+  };
+
+  &--primary-l3 {
+    color: $palette-primary-l3;
+  };
+
+  &--primary-l4 {
+    color: $palette-primary-l4;
+  };
+
+  &--primary-d1 {
+    color: $palette-primary-d1;
+  };
+
+  &--primary-d2 {
+    color: $palette-primary-d2;
+  };
+
+  &--secondary {
+    color: $palette-secondary;
+  };
+
+  &--secondary-l1 {
+    color: $palette-secondary-l1;
+  };
+
+  &--secondary-l2 {
+    color: $palette-secondary-l2;
+  };
+
+  &--secondary-l3 {
+    color: $palette-secondary-l3;
+  };
+
+  &--secondary-l4 {
+    color: $palette-secondary-l4;
+  };
+
+  &--secondary-d1 {
+    color: $palette-secondary-d1;
+  };
+
+  &--secondary-d2 {
+    color: $palette-secondary-d2;
+  };
+
+  &--primary-d2 {
+    color: $palette-primary-d2;
+  };
+
+  &--tertiary {
+    color: $palette-tertiary;
+  };
+
+  &--tertiary-l1 {
+    color: $palette-tertiary-l1;
+  };
+
+  &--tertiary-l2 {
+    color: $palette-tertiary-l2;
+  };
+
+  &--tertiary-l3 {
+    color: $palette-tertiary-l3;
+  };
+
+  &--tertiary-l4 {
+    color: $palette-tertiary-l4;
+  };
+
+  &--tertiary-d1 {
+    color: $palette-tertiary-d1;
+  };
+
+  &--tertiary-d2 {
+    color: $palette-tertiary-d2;
+  };
+
+  &--neutral-1 {
+    color: $palette-neutral-1;
+  };
+
+  &--neutral-2 {
+    color: $palette-neutral-2;
+  };
+
+  &--neutral-3 {
+    color: $palette-neutral-3;
+  };
+
+  &--danger {
+    color: $palette-danger;
+  };
+
+  &--success {
+    color: $palette-success;
+  };
+}

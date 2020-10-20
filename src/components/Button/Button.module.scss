@@ -1,0 +1,53 @@
+@import '../../tokens/colors.scss';
+
+.button {
+  letter-spacing: 0.13px;
+  padding: 8px;
+  outline: none;
+  border-radius: 8px;
+};
+
+.size {    
+  &--small {
+    font-size: 14px;
+    line-height: 16px;
+  };
+
+  &--medium {
+    font-size: 16px;
+    line-height: 19px;
+  };
+
+  &--large {
+    font-size: 18px;
+    line-height: 24px;
+  };
+}
+
+.shape {
+  &--primary {
+    color: $palette-primary;
+    background-color: $palette-primary-l3;
+    border: 1px solid $palette-primary-d1;
+
+    &:hover {
+      color: $palette-primary-d2;
+      background-color: $palette-primary-l2;
+      border: 1px solid $palette-primary-d2;
+      cursor: pointer;
+    };
+  };
+
+  &--secondary {
+    color: $palette-secondary;
+    background-color: $palette-secondary-l4;
+    border: 1px solid $palette-secondary-d1;
+
+    &:hover {
+      color: $palette-secondary-d2;
+      background-color: $palette-secondary-l2;
+      border: 1px solid $palette-secondary-d2;
+      cursor: pointer;
+    };
+  };
+}

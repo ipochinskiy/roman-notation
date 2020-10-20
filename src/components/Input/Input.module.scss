@@ -1,0 +1,9 @@
+@import '../../tokens/colors.scss';
+
+.input {
+  border: 1px solid $palette-neutral-2;
+  padding: 12px;
+  border-radius: 8px;
+  color: $palette-tertiary-d1;
+  font-size: 16px;
+}
