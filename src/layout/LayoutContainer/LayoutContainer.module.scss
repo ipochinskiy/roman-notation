@@ -1,0 +1,16 @@
+@import '../../tokens/colors.scss';
+@import '../constants.scss';
+
+.layout {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.layoutHeader {
+  height: $header-height;
+}
+
+.layoutSection {
+  background-color: $palette-neutral-3;
+  height: calc(100vh - #{$header-height});
+}
