@@ -1,12 +1,13 @@
 import React from 'react';
 
 import { Card, Input, Text } from '../../../components';
-import { useRomanConverter } from '../../hooks/use-roman-converter';
+import { useMemoizedCallback } from '../../hooks/use-memoized-callback';
+import { mapToRoman } from '../../utils/map-to-roman';
 
 import styles from './ArabicToRomanConverter.module.scss';
 
 export const ArabicToRomanConverter: React.FC = () => {
-  const { value, error, toRoman } = useRomanConverter();
+  const { value, error, doMap } = useMemoizedCallback(mapToRoman);
 
   return (
     <Card>
@@ -17,7 +18,7 @@ export const ArabicToRomanConverter: React.FC = () => {
         placeholder='42'
         type='number'
         fullWidth
-        onChange={toRoman}
+        onChange={doMap}
       />
       {value && (
         <div className={styles.info} data-testid='info'>

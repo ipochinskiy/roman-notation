@@ -1,20 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { useRomanConverter } from '../../hooks/use-roman-converter';
+import { useMemoizedCallback } from '../../hooks/use-memoized-callback';
 
 import { ArabicToRomanConverter } from './ArabicToRomanConverter';
 
-jest.mock('../../hooks/use-roman-converter');
+jest.mock('../../hooks/use-memoized-callback');
 
 describe('ArabicToRomanConverter', () => {
   const setUpMocks = () => {
     const mockedConverter = {
       error: '',
       value: '',
-      toRoman: jest.fn(),
+      doMap: jest.fn(),
     };
-    (useRomanConverter as jest.Mock).mockReturnValue(mockedConverter);
+    (useMemoizedCallback as jest.Mock).mockReturnValue(mockedConverter);
 
     return {
       mockedConverter,
@@ -86,12 +86,12 @@ describe('ArabicToRomanConverter', () => {
     `);
   });
 
-  it(`when input value changed should call "toRoman" hook's callback`, () => {
+  it(`when input value changed should call "doMap" hook's callback`, () => {
     const { mockedConverter } = setUpMocks();
 
     const component = shallow(<ArabicToRomanConverter />);
     component.findByTestId('arabic-input').simulate('change', 'new and shiny');
 
-    expect(mockedConverter.toRoman).toHaveBeenCalledWith('new and shiny');
+    expect(mockedConverter.doMap).toHaveBeenCalledWith('new and shiny');
   });
 });

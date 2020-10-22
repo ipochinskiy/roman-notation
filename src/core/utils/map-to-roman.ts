@@ -8,20 +8,22 @@ const isValidArabicNumber = (arabicNumber: number): boolean => {
   return isValidNumber && isInteger && isGreaterMin;
 };
 
-export const mapToRoman = (arabic: number): string => {
-  if (!isValidArabicNumber(arabic)) {
+export const mapToRoman = (arabic: string): string => {
+  let arabicNumeral = Number(arabic);
+
+  if (!isValidArabicNumber(arabicNumeral)) {
     throw new Error('Please type in an integer number greater that 1');
   }
 
   let result = '';
 
   let i = 0;
-  while (arabic > 0 && i < ROMAN_LITERALS.length) {
+  while (arabicNumeral > 0 && i < ROMAN_LITERALS.length) {
     const currentLiteral = ROMAN_LITERALS[i];
 
-    if (currentLiteral.value <= arabic) {
+    if (currentLiteral.value <= arabicNumeral) {
       result += currentLiteral.name;
-      arabic -= currentLiteral.value;
+      arabicNumeral -= currentLiteral.value;
     } else {
       i++;
     }
