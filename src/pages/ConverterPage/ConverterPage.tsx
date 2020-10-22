@@ -9,7 +9,9 @@ export const ConverterPage: React.FC = () => {
   return (
     <LayoutOutlet>
       <div className={styles.page}>
-        <ArabicToRomanConverter />
+        <div className={styles.converter}>
+          <ArabicToRomanConverter />
+        </div>
       </div>
     </LayoutOutlet>
   );

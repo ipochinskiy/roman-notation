@@ -1,15 +1,5 @@
 @import '../../../tokens/screens.scss';
 
-.converter {
-  @include for-phone {
-    width: 100%;
-  }
-
-  @include for-tablet-up {
-    width: 320px;
-  }
-}
-
 .info {
   margin-top: 12px;
 

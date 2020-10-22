@@ -12,7 +12,11 @@ describe('ConverterPage', () => {
         <div
           className="page"
         >
-          <ArabicToRomanConverter />
+          <div
+            className="converter"
+          >
+            <ArabicToRomanConverter />
+          </div>
         </div>
       </LayoutOutlet>
     `);
