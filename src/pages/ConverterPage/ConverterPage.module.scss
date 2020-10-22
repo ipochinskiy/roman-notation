@@ -2,19 +2,31 @@
 
 .page {
   display: flex;
-  justify-content: center;
+
+  @include for-phone {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include for-tablet-up {
+    justify-content: center;
+  }
 }
 
 .converter {
   @include for-phone {
     width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
   }
 
   @include for-tablet-up {
     width: 320px;
-  }
 
-  &:not(:first-child) {
-    margin-left: 16px;
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
   }
 }

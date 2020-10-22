@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ArabicToRomanConverter } from '../../core';
+import { ArabicToRomanConverter, RomanToArabicConverter } from '../../core';
 import { LayoutOutlet } from '../../layout';
 
 import styles from './ConverterPage.module.scss';
@@ -11,6 +11,9 @@ export const ConverterPage: React.FC = () => {
       <div className={styles.page}>
         <div className={styles.converter}>
           <ArabicToRomanConverter />
+        </div>
+        <div className={styles.converter}>
+          <RomanToArabicConverter />
         </div>
       </div>
     </LayoutOutlet>
