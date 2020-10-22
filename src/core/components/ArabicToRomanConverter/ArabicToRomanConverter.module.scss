@@ -1,4 +1,4 @@
-@import '../../tokens/screens.scss';
+@import '../../../tokens/screens.scss';
 
 .converter {
   @include for-phone {
@@ -40,4 +40,8 @@
       }
     }
   }
+}
+
+.error {
+  margin-top: 12px;
 }

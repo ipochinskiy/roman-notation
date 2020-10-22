@@ -1,1 +1,1 @@
-export { ArabicToRomanConverter } from './ArabicToRomanConverter/ArabicToRomanConverter';
+export { ArabicToRomanConverter } from './components/ArabicToRomanConverter/ArabicToRomanConverter';
